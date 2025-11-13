@@ -1,0 +1,19 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "imagem": "images/noticia1.jpg",
+      "titulo": "Novo curso de Estética Orofacial já disponível!"
+    },
+    {
+      "id": 2,
+      "imagem": "images/noticia2.jpg",
+      "titulo": "100% de aprovação dos alunos na última turma."
+    },
+    {
+      "id": 3,
+      "imagem": "images/noticia3.jpg",
+      "titulo": "Inscrições abertas para Dentística Restauradora!"
+    }
+  ]
+}
