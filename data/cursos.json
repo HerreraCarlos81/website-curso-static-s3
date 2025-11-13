@@ -1,0 +1,28 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "titulo": "Fundamentos da Odontologia Integrada",
+      "descricao": "Curso introdutório sobre os principais fundamentos da odontologia moderna.",
+      "imagem": "images/curso1.jpg",
+      "valor": "R$ 897,00",
+      "data_inicio": "10/01/2026"
+    },
+    {
+      "id": 2,
+      "titulo": "Estética Orofacial Avançada",
+      "descricao": "Aprenda técnicas inovadoras em estética orofacial com especialistas.",
+      "imagem": "images/curso2.jpg",
+      "valor": "R$ 1.350,00",
+      "data_inicio": "17/02/2026"
+    },
+    {
+      "id": 3,
+      "titulo": "Dentística Restauradora",
+      "descricao": "Imersão prática em tratamentos restauradores e reabilitação.",
+      "imagem": "images/curso3.jpg",
+      "valor": "R$ 1.130,00",
+      "data_inicio": "15/03/2026"
+    }
+  ]
+}
