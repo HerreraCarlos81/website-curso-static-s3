@@ -1,0 +1,339 @@
+/* Arquivo: styles.css */
+
+:root {
+  --cor1: #96B8B6;
+  --cor2: #A596B8;
+  --cor3: #B89698;
+  --cor4: #A9B896;
+  --rosa: #F8E3EB;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(135deg, var(--rosa) 0%, var(--cor1) 35%, var(--cor2) 60%, var(--cor3) 80%, var(--cor4) 100%);
+  color: #232323;
+}
+
+.glass-menu {
+  width: 100vw;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.38);
+  backdrop-filter: blur(8px);
+  border-bottom: 1.5px solid var(--cor2);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glass-menu .logo {
+  height: 38px;
+  margin-right: 1.5rem;
+}
+.glass-menu nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+.glass-menu nav ul li {
+  transition: 0.3s;
+}
+.glass-menu nav ul li.active,
+.glass-menu nav ul li:hover {
+  transform: scale(1.11);
+}
+.glass-menu nav ul li a {
+  text-decoration: none;
+  color: var(--cor2);
+  font-weight: 500;
+  padding: 4px 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.5);
+  transition: all 0.3s;
+}
+.glass-menu nav ul li.active a,
+.glass-menu nav ul li a:hover {
+  color: var(--cor1);
+  background: rgba(255,255,255,0.7);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  padding: 2rem 5vw;
+  gap: 44px;
+}
+.hero .professora-img img {
+  width: 240px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 32px;
+  box-shadow: 0 6px 28px 0 rgba(149,148,255,0.10);
+  opacity: 0;
+  transform: translateX(-60px);
+  animation: slideRight 0.9s cubic-bezier(.77,.2,.2,1) 0.15s forwards;
+}
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.hero-info {
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.hero-info h1 {
+  color: var(--cor2);
+  font-size: 2.1rem;
+  margin: 0 0 12px 0;
+}
+.hero-info p {
+  font-size: 1.02rem;
+  margin: 0;
+}
+.btn-curso {
+  padding: 12px 28px;
+  background: var(--cor1);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 22px;
+  box-shadow: 0 3px 16px 0 rgba(150,184,182,0.13);
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  width: fit-content;
+}
+.btn-curso:hover {
+  background: var(--cor2);
+  box-shadow: 0 6px 28px 0 rgba(190,150,182,0.16);
+  transform: scale(1.08);
+}
+
+.carrossel-cursos {
+  margin: 54px auto 0 auto;
+  padding: 0 5vw;
+}
+.carrossel-cursos h2 {
+  color: var(--cor3);
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.cards-container {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0 28px 0;
+}
+.card {
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 3px 10px 0 rgba(170,184,150,.08);
+  min-width: 290px;
+  min-height: 210px;
+  border-radius: 18px;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  scroll-snap-align: start;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img{
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 9px;
+  margin-bottom: 12px;
+}
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 32px 0 rgba(165,150,184,0.2);
+  filter: brightness(1.12);
+}
+.card-title {
+  color: var(--cor3);
+  font-weight: 600;
+  font-size: 1.18rem;
+}
+.card-desc {
+  color: #444;
+  font-size: 0.98rem;
+}
+
+.noticias {
+  margin: 50px auto 0 auto;
+  padding: 0 5vw;
+}
+.noticias h2 { 
+  color: var(--cor4);
+  text-align: center;
+  font-size: 1.23rem;
+}
+.noticias-container {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0 32px 0;
+}
+.noticia-banner {
+  min-width: 340px;
+  height: 142px;
+  background: linear-gradient(90deg, var(--rosa) 22%, var(--cor4) 78%);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 2px 10px 0 rgba(169,184,150,.08);
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+.noticia-banner img {
+  width: 140px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px 0 0 16px;
+}
+.noticia-titulo {
+  font-weight: 700;
+  color: var(--cor3);
+  font-size: 1rem;
+}
+
+.social {
+  margin: 44px auto 0 auto;
+  text-align: center;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 14px 0 0 0;
+}
+.social-links a img {
+  height: 34px;
+  transition: transform 0.3s;
+}
+.social-links a:hover img {
+  transform: scale(1.17);
+}
+
+.footer {
+  background: rgba(255,255,255,0.42);
+  padding: 26px 5vw 18px 5vw;
+  margin-top: 64px;
+  border-top: 1.5px solid var(--cor4);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+}
+.footer-logo {
+  height: 36px;
+}
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: .98rem;
+  color: #666;
+}
+.footer-info nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-info nav ul li a {
+  color: var(--cor1);
+  font-weight: 500;
+  text-decoration: underline;
+}
+.footer-info nav ul li a:hover {
+  color: var(--cor2);
+}
+
+.fab-whatsapp {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1200;
+  background: var(--cor1);
+  color: #fff;
+  border-radius: 28px;
+  box-shadow: 0 4px 20px 0 rgba(140,194,148,0.13);
+  border: none;
+  padding: 14px 20px 14px 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.02rem;
+  transition: width 0.3s, background 0.3s;
+  min-width: 54px;
+  width: 54px;
+  overflow: hidden;
+}
+.fab-whatsapp img {
+  height: 26px;
+  margin-right: 10px;
+}
+.fab-whatsapp .fab-text {
+  opacity: 0;
+  white-space: nowrap;
+  font-weight: 600;
+  transition: opacity 0.3s;
+  color: #fff;
+}
+.fab-whatsapp:hover {
+  width: 230px;
+  background: var(--cor2);
+}
+.fab-whatsapp:hover .fab-text {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 3vh 2vw;
+    gap: 24px;
+  }
+  .cards-container, .noticias-container {
+    gap: 16px;
+    padding: 4px 0 18px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .glass-menu nav ul {
+    gap: 16px;
+  }
+  .footer-info nav ul {
+    gap: 8px;
+  }
+  .carrossel-cursos, .noticias {
+    padding: 0 1vw;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 2vw;
+  }
+}
